@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header style="display: none">
+    <noscript>Turn on javascript</noscript>
+    <span class="nick" id="nick1"></span>
+    <span class="color" id="color1"></span>
+    <span class="vs">vs</span>
+    <span class="nick" id="nick2"></span>
+    <span class="color" id="color2"></span>
+</header>
+<main style="display: none;pointer-events: all">
+    <canvas id="3d-game"></canvas>
+    <div id="timer" style="display: none"></div>
+    <div id="top-form-container">
+        <div class="top-form" id="login-form">
+            <h2>Welcome to <b>Checkers</b></h2>
+            <h4 id="login-status">Enter your nick to continue</h4>
+            <label>
+                <input type=text id=nick autocomplete=off autocapitalize=off maxlength=10 placeholder="Your nick">
+            </label>
+            <br>
+
+            <label class=input-btn>
+                <input type=button id=submit value="Play!">
+            </label>
+            <label class=input-btn>
+                <input type=button id="clear-game" value="Reset game">
+            </label>
+        </div>
+        <div class="top-form" id="waiting-form">
+            <h2 id="waiting-status">Waiting for another player...</h2>
+            <img src="res/diamond_pickaxe.png" alt="" id=pickaxe>
+            <img src="res/obsidian.png" alt="" id=obsidian>
+            <canvas id=animation-canvas></canvas>
+        </div>
+    </div>
+    <div id="game-messages-overlay">
+        <div id="main-message-container" style="opacity: 0;">
+            <p id="main-message"></p>
+            <p id="main-message-shadow"></p>
+        </div>
+        <div id="sub-message-container" style="opacity: 0;">
+            <p id="sub-message"></p>
+            <p id="sub-message-shadow"></p>
+        </div>
+    </div>
+</main>
+</body>
+<script type=module src="js/main.js"></script>
+</html>

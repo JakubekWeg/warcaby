@@ -1,0 +1,11 @@
+{
+  "name": "warcaby",
+  "version": "1.0.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/three": "latest",
+    "three": "^0.115.0"
+  },
+  "dependencies": {}
+}

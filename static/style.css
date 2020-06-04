@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Pixelated';
+    src: url('/res/font/eot') format("eot"), url('/res/font/woff') format("woff"), url('/res/font/ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*noinspection CssOverwrittenProperties*/
+:root {
+    font-family: 'Pixelated', monospace;
+    background-color: black;
+    color: white;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+body {
+    box-sizing: border-box;
+    /*border: 1px solid chocolate;*/
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+p {
+    margin: 0;
+}
+
+canvas {
+    user-select: none;
+    box-sizing: border-box;
+}
+
+#top-form-container {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-form {
+    max-width: 88vw;
+    padding: 16px 8px;
+    position: absolute;
+    border: 6px solid #2d2717;
+    box-shadow: 4px 4px 16px black;
+    border-radius: 6px;
+    background-image: url("/res/dark_dirt.png");
+    background-size: 64px;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .6s;
+}
+
+.top-form > * {
+    margin: 4px;
+}
+
+label, input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    width: 100%;
+    font-family: 'Pixelated', monospace;
+    text-align: center;
+    font-size: large;
+    background: none;
+    border: none;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=button] {
+    cursor: pointer;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+}
+
+#waiting-form img {
+    display: none;
+}
+
+.input-btn {
+    font-size: 1.3em;
+    padding: 4px 12px;
+    border: 2px solid black;
+    background-image: url("/res/button.png");
+    background-size: cover;
+    width: 198px;
+    /*width: 296px;*/
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+.input-btn:hover {
+    border: 2px solid white;
+}
+
+label {
+    display: block;
+    background: black;
+    padding: 4px;
+    /*width: 296px;*/
+    border: 2px solid #a0a0a0;
+}
+
+label:focus-within {
+    border: 2px solid white;
+}
+
+#timer {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+}
+
+#game-messages-overlay {
+    pointer-events: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#game-messages-overlay > * {
+    position: relative;
+    text-rendering: optimizeSpeed;
+    transition: opacity .5s;
+}
+
+#game-messages-overlay > * > * {
+    white-space: nowrap;
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+#game-messages-overlay > * > :nth-child(2) {
+    z-index: 10;
+    color: #494949;
+    position: absolute;
+    top: .1em;
+    left: .2em;
+    bottom: 0;
+    right: 0;
+}
+
+#main-message-container {
+    top: -5rem;
+    font-size: 3rem;
+}
+
+#sub-message-container {
+    top: -1rem;
+    font-size: 1.5rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto 64px auto auto;
+    grid-template-areas: '. nick1 vs nick2 .' '. color1 vs color2 .';
+}
+
+.nick {
+    font-size: 2.5rem;
+}
+
+#nick1 {
+    text-align: end;
+    grid-area: nick1;
+}
+
+#nick2 {
+    text-align: start;
+    grid-area: nick2;
+}
+
+.vs {
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+    grid-area: vs;
+}
+
+#color1 {
+    text-align: end;
+    grid-area: color1;
+}
+
+#color2 {
+    text-align: start;
+    grid-area: color2;
+}
