@@ -1,26 +1,23 @@
 {
-  "compilerOptions": {
-    "target": "ES2018",
-    "module": "ES2015",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "preserveConstEnums": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "outDir": "./dist/"
-  },
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true,
-    "forkChecker": true,
-    "useCache": true
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "compileOnSave": true,
-  "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  }
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "ES2015",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "preserveConstEnums": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "outDir": "./static/js/"
+    },
+    "awesomeTypescriptLoaderOptions": {
+        "useWebpackText": true,
+        "forkChecker": true,
+        "useCache": true
+    },
+    "exclude": ["node_modules", "dist"],
+    "compileOnSave": true,
+    "buildOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
 }
